@@ -1,0 +1,19 @@
+Source: tmv
+Priority: optional
+Maintainer: Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>
+Build-Depends: debhelper (>= 8.0.0), scons
+Standards-Version: 3.9.4
+Section: libs
+Homepage: https://github.com/rmjarvis/tmv
+
+Package: tmv-dev
+Section: libdevel
+Architecture: any
+Depends: tmv0 (= ${binary:Version})
+Description: A fast, intuitive linear algebra library for C++
+
+Package: tmv0
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: A fast, intuitive linear algebra library for C++

@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+SCONS=scons 
+DEB_DESTDIR=$(PWD)/debian/tmp
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	$(SCONS) PREFIX=$(DEB_DESTDIR)/usr
+
+override_dh_clean:
+	dh_clean
+	$(SCONS)  -c
+	rm -rf tmv_scons.conf
+	rm -rf config.log
+	rm -rf share/tmv-link
+
+override_dh_auto_install:
+	export
+	$(SCONS) install PREFIX=$(DEB_DESTDIR)/usr

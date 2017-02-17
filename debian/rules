@@ -20,5 +20,7 @@ override_dh_clean:
 	rm -rf share/tmv-link
 
 override_dh_auto_install:
-	export
 	$(SCONS) install PREFIX=$(DEB_DESTDIR)/usr
+
+override_dh_test:
+	scons test

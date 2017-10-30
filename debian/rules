@@ -4,7 +4,7 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 SCONS=scons 
-DEB_DESTDIR=$(PWD)/debian/tmp
+DEB_DESTDIR=$(CURDIR)/debian/tmp
 
 %:
 	dh $@
@@ -12,12 +12,9 @@ DEB_DESTDIR=$(PWD)/debian/tmp
 override_dh_auto_build:
 	$(SCONS) PREFIX=$(DEB_DESTDIR)/usr
 
-override_dh_clean:
+override_dh_auto_clean:
 	dh_clean
 	$(SCONS)  -c
-	rm -rf tmv_scons.conf
-	rm -rf config.log
-	rm -rf share/tmv-link
 
 override_dh_auto_install:
 	$(SCONS) install PREFIX=$(DEB_DESTDIR)/usr

@@ -1,3 +1,4 @@
 usr/include/*
 usr/lib/lib*.so
 usr/share/tmv/tmv-link
+usr/bin/tmv-version

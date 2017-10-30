@@ -1,3 +1,9 @@
+tmv (0.74-1kern1) xenial; urgency=medium
+
+  * modernise package
+
+ -- KERN packaging <packaging@kernsuite.info>  Mon, 30 Oct 2017 10:00:47 +0200
+
 tmv (0.74-1) xenial; urgency=low
 
   * Initial release

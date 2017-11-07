@@ -18,6 +18,7 @@ override_dh_auto_clean:
 
 override_dh_auto_install:
 	$(SCONS) install PREFIX=$(DEB_DESTDIR)/usr
+	echo "-L/usr/lib -ltmv -lcblas -lpthread -fopenmp" > debian/tmp/usr/share/tmv/tmv-link
 
 override_dh_test:
 	scons test

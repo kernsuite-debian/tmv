@@ -1,3 +1,10 @@
+tmv (0.74-1kern3) bionic; urgency=medium
+
+  * update depenency for bionic
+  * make bionic release
+
+ -- KERN packaging <packaging@kernsuite.info>  Fri, 11 May 2018 12:26:23 +0200
+
 tmv (0.74-1kern2) xenial; urgency=medium
 
   * fix linker helper script
